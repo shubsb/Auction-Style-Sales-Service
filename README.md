@@ -8,4 +8,4 @@ By: Adwan Salahuddin Syed, Miral Panchal, Shubham Patel
 
 ## Phase 2 - Front-End Rapid Prototype:
 2018-01-26
-[Test Cases](Phase%202/) (Front-end source code for Prototype)<br />
+[Rapid Prototype](Phase%202/) (Front-end source code for Prototype)<br />
