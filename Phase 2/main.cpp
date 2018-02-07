@@ -1,6 +1,7 @@
-#include<iostream>
-#include<string>
-#include<fstream>
+#include <iostream>
+#include <string>
+#include <fstream>
+#include "user.h"
 
 using namespace std;
 
@@ -30,6 +31,14 @@ void login(string currentUser){
 
 int main(int argc, char const *argv[]) {
   /* code */
+  string userType = "AA";
+  string userName = argv[1];
+  User *u1 = new User(userType, userName, 1000.0f);
+  u1->print();
+  u1->addCredit(20.0f);
+  u1->print();
+  delete u1;
+
   login(argv[1]);
   return 0;
 
