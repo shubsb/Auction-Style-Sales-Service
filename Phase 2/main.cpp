@@ -35,17 +35,17 @@ int main(int argc, char const *argv[]) {
   string userType = "AA";
   string userName = argv[1];
   User *u1 = new User(userType, userName, 1000.0f);
-  u1->addCredit(20.0f);
+  u1->addCredit(10.0f);
   u1->print();
   cout << "\n";
 
   User *u2 = new User("FS", "Miral", 100.0f);
-  u2->addCredit(20.0f);
+  u2->addCredit(10.0f);
   u2->print();
   cout << "\n";
 
   User *u3 = new User("BS", "Shubham", 120.0f);
-  u3->addCredit(200.0f);
+  u3->addCredit(100.0f);
   u3->print();
   cout << "\n";
 
