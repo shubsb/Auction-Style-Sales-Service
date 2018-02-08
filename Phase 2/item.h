@@ -14,13 +14,13 @@ class Item{
     string getCurrentWinner();
     int getDaysRemaining();
     float getHighestBid();
+    void getAvailableItems();
 
     void setItemName(string iN);
     void setSellUser(string sellU);
     void setCurrentWinner(string cW);
     void setDaysRemaining(int dR);
     void setHighestBid(float hb);
-
 
     void print();
   private:

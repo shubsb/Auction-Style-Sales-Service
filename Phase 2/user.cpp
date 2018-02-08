@@ -3,9 +3,9 @@
 
 // Constructors
 User::User() {
-  userType = "XX";
-  userName = "UUUUUUUUUUUUUUU";
-  credit = 000000000.00;
+  userType;
+  userName;
+  credit;
 }
 
 User::User(string uT, string uN, float c) {

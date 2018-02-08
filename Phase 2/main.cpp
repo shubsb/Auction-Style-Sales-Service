@@ -3,13 +3,15 @@
 #include <fstream>
 #include <vector>
 #include "user.h"
+#include "item.h"
+#include "transaction.h"
 
 using namespace std;
 
 void login(string currentUser){
 
   ifstream userFile;
-  userFile.open("currentUserAccountsFile.uaf");
+  userFile.open("current_User_Accounts_File.uaf");
 
   bool loginStatus = false;
 
@@ -48,6 +50,12 @@ int main(int argc, char const *argv[]) {
   u3->addCredit(100.0f);
   u3->print();
   cout << "\n";
+
+  //string iN, string sellU, string cW, int dR, float hB
+  Item *i1 = new Item("Book", "Shubham", "Adwan", 4, 100.0f);
+  Item *i2 = new Item("Apple", "Miral", "Adwan", 4, 120.0f);
+  i1->print();
+  i2->print();
 
   //vector<User> userList;
   vector<User> userList;
