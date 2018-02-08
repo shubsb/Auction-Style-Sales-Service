@@ -39,27 +39,27 @@ int main(int argc, char const *argv[]) {
   string userName = argv[1];
   User *u1 = new User(userType, userName, 1000.0f);
   u1->addCredit(10.0f);
-  u1->print();
-  cout << "\n";
+  // u1->print();
+  // cout << "\n";
 
   User *u2 = new User("FS", "Miral", 100.0f);
   u2->addCredit(10.0f);
-  u2->print();
-  cout << "\n";
+  // u2->print();
+  // cout << "\n";
 
   User *u3 = new User("BS", "Shubham", 120.0f);
   u3->addCredit(100.0f);
-  u3->print();
-  cout << "\n";
+  // u3->print();
+  // cout << "\n";
 
   //string iN, string sellU, string cW, int dR, float hB
   Item *i1 = new Item("Book", "Shubham", "Adwan", 4, 100.0f);
   Item *i2 = new Item("Apple", "Miral", "Adwan", 4, 120.0f);
-  i1->print();
-  i2->print();
+  // i1->print();
+  // i2->print();
 
   Bid *b1 = new Bid(100.0f,120.0f,i1->getHighestBid()*1.05);
-  b1->print();
+  // b1->print();
 
   //vector<User> userList;
   vector<User> userList;
@@ -68,12 +68,27 @@ int main(int argc, char const *argv[]) {
   userList.push_back(*u3);
 
   cout << "\nUser List:" << endl;
-  for (vector<User>::iterator it = userList.begin() ; it != userList.end(); ++it){
-    it->print();
-    cout << '\n';
-  }
+  // for (vector<User>::iterator it = userList.begin() ; it != userList.end(); ++it){
+  //   it->print();
+  //   cout << '\n';
+  // }
 
-  login(argv[1]);
+  string in1;
+  cin >> in1;
+  cout << in1 << '\n';
+
+  string in2;
+  cin >> in2;
+  cout << in2 << '\n';
+
+  string in3;
+  cin >> in3;
+  cout << in3 << '\n';
+
+printf("%s\n", argv[1]);
+
+
+  //login(in2);
   return 0;
 
   // memory management
