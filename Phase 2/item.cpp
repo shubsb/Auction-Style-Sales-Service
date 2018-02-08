@@ -15,7 +15,7 @@ Item::Item(string iN, string sellU, string cW, int dR, float hB){
   sellUser = sellU;
   currentWinner = cW;
   daysRemaining = dR;
-  HighestBid(hB);
+  setHighestBid(hB);
 }
 
 // getters
@@ -30,7 +30,7 @@ void Item::setItemName(string iN) {itemName = iN;}
 void Item::setSellUser(string sellU) {sellUser = sellU;}
 void Item::setCurrentWinner(string cW) {currentWinner = cW;}
 void Item::setDaysRemaining(int dR) {daysRemaining = dR;}
-void Item::setHighestbid(float hB) {HighestBid = hB;}
+void Item::setHighestBid(float hB) {highestBid = hB;}
 
 // print Item info
 void Item::print() {
@@ -38,5 +38,5 @@ void Item::print() {
   cout << "Sell User: " + getSellUser() << endl;
   cout << "Current Winner: " + getCurrentWinner() << endl;
   cout << "Days Remaining: " + getDaysRemaining() << endl;
-  cout << "Hieghest Bid: " + getHighestBid() << endl;
+  cout << "Highest Bid: " + to_string(getHighestBid()) << endl;
 }

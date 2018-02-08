@@ -18,8 +18,8 @@ class Item{
     void setItemName(string iN);
     void setSellUser(string sellU);
     void setCurrentWinner(string cW);
-    void setDayRemaining(int dR);
-    void setHighestbid(float hb);
+    void setDaysRemaining(int dR);
+    void setHighestBid(float hb);
 
 
     void print();
