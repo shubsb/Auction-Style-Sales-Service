@@ -33,8 +33,17 @@ void login(string currentUser){
   userFile.close();
 };
 
-int main(int argc, char const *argv[]) {
-  /* code */
+void logout(){
+  // TO D
+};
+
+void deleteUser(){
+  // TO DO
+};
+
+void createUser(){
+  // TO DO
+  /*
   string userType = "AA";
   string userName = argv[1];
   User *u1 = new User(userType, userName, 1000.0f);
@@ -51,16 +60,8 @@ int main(int argc, char const *argv[]) {
   u3->addCredit(100.0f);
   // u3->print();
   // cout << "\n";
-
-  //string iN, string sellU, string cW, int dR, float hB
-  Item *i1 = new Item("Book", "Shubham", "Adwan", 4, 100.0f);
-  Item *i2 = new Item("Apple", "Miral", "Adwan", 4, 120.0f);
-  // i1->print();
-  // i2->print();
-
-  Bid *b1 = new Bid(100.0f,120.0f,i1->getHighestBid()*1.05);
-  // b1->print();
-
+  */
+  /*
   //vector<User> userList;
   vector<User> userList;
   userList.push_back(*u1);
@@ -72,40 +73,52 @@ int main(int argc, char const *argv[]) {
   //   it->print();
   //   cout << '\n';
   // }
-
-  string in1;
-  cin >> in1;
-  cout << in1 << '\n';
-
-  string in2;
-  cin >> in2;
-  cout << in2 << '\n';
-
-  string in3;
-  cin >> in3;
-  cout << in3 << '\n';
-
-printf("%s\n", argv[1]);
-
-
-  //login(in2);
-  return 0;
-
-  // memory management
-  cout << '\n';
-  delete u1;
-  delete u2;
-  delete u3;
-
-  /*
-  login
-  logout
-  createUser
-  deleteUser
-  advertise
-  bid
-  refund
-  addCredit
-  transactionCode (4 functions)
   */
+};
+
+void advertise(){
+  // TO DO
+  /*
+  //string iN, string sellU, string cW, int dR, float hB
+  Item *i1 = new Item("Book", "Shubham", "Adwan", 4, 100.0f);
+  Item *i2 = new Item("Apple", "Miral", "Adwan", 4, 120.0f);
+  // i1->print();
+  // i2->print();
+
+  */
+};
+
+void bid(){
+  // TO DO
+  /*
+  Bid *b1 = new Bid(100.0f,120.0f,i1->getHighestBid()*1.05);
+  // b1->print();
+  */
+};
+
+void refund(){
+  // TO DO
+};
+
+void addCredit(){
+  // TO DO
+};
+
+int main(int argc, char const *argv[]) {
+  string input;
+  string user;
+  cout << "Welcome to Auction Style Sales Service" << endl;
+  cout << "Enter 'login' to start" << endl;
+  cin >> input;
+  if (input == "login") {
+    cout << "\nEnter username: ";
+    cin >> user;
+    login(user);
+  } else {
+    cout << "Invalid login, please enter again" << endl;
+  }
+
+  cout << "Choose transaction type: \ncreate\ndelete\nadvertise\nbid\nrefund\naddCredit" << endl;
+
+  return 0;
 }
