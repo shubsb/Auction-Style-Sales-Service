@@ -2,7 +2,7 @@
 #include <fstream>
 #include "item.h"
 
-string availableItemsFile = "available_Items_File.ai";
+
 // Constructors
 Item::Item() {
     itemName;
@@ -30,9 +30,6 @@ string Item::getSellUser(){return sellUser;}
 string Item::getCurrentWinner(){return currentWinner;}
 int Item::getDaysRemaining(){return daysRemaining;}
 float Item::getHighestBid(){return highestBid;}
-void Item::getAvailableItems(){
-  // todo
-}
 
 // setters
 void Item::setItemName(string iN) {itemName = iN;}

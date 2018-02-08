@@ -14,7 +14,6 @@ class Item{
     string getCurrentWinner();
     int getDaysRemaining();
     float getHighestBid();
-    void getAvailableItems();
 
     void setItemName(string iN);
     void setSellUser(string sellU);

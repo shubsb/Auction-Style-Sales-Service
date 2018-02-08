@@ -104,7 +104,13 @@ void addCredit(){
   // TO DO
 };
 
+
+vector getAvailableItems() {
+
+};
+
 int main(int argc, char const *argv[]) {
+  string availableItemsFile = "available_Items_File.ai";
   string input;
   string user;
   cout << "Welcome to Auction Style Sales Service" << endl;
