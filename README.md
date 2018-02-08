@@ -1,5 +1,12 @@
 # Auction-Style-Sales-Service
 
+The Project is done in two parts:
+1. The front end, a point of purchase terminal for bidding and advertising items
+   (written in C++)
+   
+2. The back end, an overnight batch processor to maintain and update a mater auctions files
+   (written in Java)
+
 By: Adwan Salahuddin Syed, Miral Panchal, Shubham Patel
 
 ## Phase 1 - Front-End Requirements:
