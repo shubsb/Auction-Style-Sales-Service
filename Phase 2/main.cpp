@@ -5,6 +5,7 @@
 #include "user.h"
 #include "item.h"
 #include "transaction.h"
+#include "bid.h"
 
 using namespace std;
 
@@ -56,6 +57,9 @@ int main(int argc, char const *argv[]) {
   Item *i2 = new Item("Apple", "Miral", "Adwan", 4, 120.0f);
   i1->print();
   i2->print();
+
+  Bid *b1 = new Bid(100.0f,120.0f,i1->getHighestBid()*1.05);
+  b1->print();
 
   //vector<User> userList;
   vector<User> userList;
