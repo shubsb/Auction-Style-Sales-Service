@@ -2,7 +2,9 @@
 #include <fstream>
 #include "bid.h"
 
-
+/**
+ * The maximum amount any user can bid
+ */
 float maximumBid = 999999.0f;
 
 /**
@@ -13,7 +15,6 @@ Bid::Bid() {
         newBid;
         minimumBid;
 }
-
 
 Bid::Bid(float cB, float nB, float mnB){
         currentBid = cB;
@@ -30,9 +31,9 @@ Bid::~Bid() {
 
 /**
  * Accessors
- * @return currentBid
- * @return newBid
- * @return minimumBid
+ * @return The current bid
+ * @return The newest bid
+ * @return The minimum bid
  */
 float Bid::getCurrentBid(){
         return currentBid;
@@ -46,9 +47,9 @@ float Bid::getMinimumBid(){
 
 /**
  * Mutators
- * @param cB  What the current bid is
- * @param nB  The value of a new bid the user submits
- * @param mnB The value of the new minimum bid calculated after each bid
+ * @param cB  Sets the current bid amount
+ * @param nB  Sets the new bid amount
+ * @param mnB Sets the new minimum bid amount
  */
 void Bid::setCurrentBid(float cB) {
         currentBid = cB;
@@ -60,7 +61,9 @@ void Bid::setMinimumBid(float mnB) {
         minimumBid = mnB;
 }
 
-// print Bid information primarily used for debugging
+/**
+ * Print Bid information primarily used for debugging
+ */
 void Bid::print() {
         cout << "Current Bid: " + to_string(getCurrentBid()) << endl;
         cout << "New Bid: " + to_string(getNewBid()) << endl;

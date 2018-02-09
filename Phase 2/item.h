@@ -3,31 +3,40 @@
 
 using namespace std;
 
-class Item{
+class Item {
   public:
-    Item(); // default contructor
-    Item(string iN, string sellU, string cW, int dR, float hB); // constructor
-    ~Item(); // default destructor
 
+    // Constructors
+    Item();
+    Item(string iN, string sellU, string cW, int dR, float hB);
+
+    // Desctructor
+    ~Item();
+
+    // Accessors
     string getItemName();
     string getSellUser();
     string getCurrentWinner();
     int getDaysRemaining();
     float getHighestBid();
 
+    // Mutators
     void setItemName(string iN);
     void setSellUser(string sellU);
     void setCurrentWinner(string cW);
     void setDaysRemaining(int dR);
     void setHighestBid(float hb);
 
+    // Print function for debugging
     void print();
+
   private:
-    string itemName;
-    string sellUser;
-    string currentWinner;
-    int daysRemaining;
-    float highestBid;
+    
+    string itemName;        // The items name
+    string sellUser;        // The seller's name
+    string currentWinner;   // The current winner's name
+    int daysRemaining;      // Days remaining on the bid
+    float highestBid;       // The highest bid
 };
 
-#endif // Item_H
+#endif // ITEM_H

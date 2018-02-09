@@ -3,25 +3,34 @@
 
 using namespace std;
 
-class Bid{
+class Bid {
   public:
-    Bid(); // default contructor
-    Bid(float cB, float nB, float mnB); // constructor
-    ~Bid(); // default destructor
 
+    // Constructors
+    Bid();
+    Bid(float cB, float nB, float mnB);
+
+    // Desctructors
+    ~Bid();
+
+    // Accessors
     float getCurrentBid();
     float getNewBid();
     float getMinimumBid();
 
+    // Mutators
     void setCurrentBid(float cB);
     void setNewBid(float nB);
     void setMinimumBid(float mnB);
 
+    // Print function for debugging
     void print();
-  private:
-    float currentBid;
-    float newBid;
-    float minimumBid;
-  };
 
-#endif // Item_H
+  private:
+
+    float currentBid;   // Current user bid
+    float newBid;       // Newest bid by user
+    float minimumBid;   // Minimum bid allowed
+};
+
+#endif // BID_H
