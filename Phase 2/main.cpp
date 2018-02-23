@@ -14,16 +14,17 @@ using namespace std;
  * Otherwise the program rejects the user
  * @param currentUser The users login credentials
  */
-void login(string currentUser){
+void login(string currentUser, string &currentUserAccountsFile){
 
         /**
          * Opens and iterates through the current user accounts file
          * containing all user accounts
          */
         ifstream userFile;
-        userFile.open("current_User_Accounts_File.uaf");
+        userFile.open(currentUserAccountsFile.c_str());
 
         bool loginStatus = false;
+        string userType = "NULL";
 
         while (!userFile.eof()) {
                 string line;
@@ -32,13 +33,15 @@ void login(string currentUser){
                 // Checks if user exists in line of text
                 if (currentUser == line.substr(0,15)) {
                         loginStatus = true;
+                        userType = line.substr(16,2);
                 }
         }
 
         if (loginStatus == true) {
-                cout << "LOGIN SUCCESSFUL" << endl;
+                cout << "VALID_USER" << endl;
+                cout << "Logged in as " + userType << endl;
         }else{
-                cout << "LOGIN FAILED" << endl;
+                cout << "INVALID_USER" << endl;
         }
 
         userFile.close();
@@ -49,6 +52,7 @@ void login(string currentUser){
  */
 void logout(){
         // TODO
+        cout << "Logout implementation" << endl;
 };
 
 /**
@@ -148,27 +152,33 @@ int main(int argc, char const *argv[]) {
         /**
          * This file stores every available item up for auction
          */
-        string currentUserAccountsFile = argv[0];
-        string availableItemsFile = argv[1];
-        string dailyTransactionFile = argv[2];
-        string input;
+        string currentUserAccountsFile = argv[1];
+        string availableItemsFile = argv[2];
+        string dailyTransactionFile = argv[3];
+        string input1;
         string user;
+
+        cout << "\nLoading files..." << endl;
+        cout << currentUserAccountsFile << endl;
+        cout << availableItemsFile << endl;
+        cout << dailyTransactionFile << endl;
+
 
         /**
          * Welcomes user and asks user to login
          */
-        cout << "Welcome to Auction Style Sales Service" << endl;
+        cout << "\nWelcome to Auction Style Sales Service" << endl;
         cout << "Enter 'login' to start" << endl;
-        cin >> input;
+        cin >> input1;
 
         /**
          * If the user decides to login their credentials are checked
          * @param input Command to login (should accept 'login')
          */
-        if (input == "login") {
+        if (input1 == "login") {
                 cout << "\nEnter username: ";
                 cin >> user;
-                login(user);
+                login(user, currentUserAccountsFile);
         } else {
                 cout << "Invalid login, please enter again" << endl;
         }
@@ -176,7 +186,40 @@ int main(int argc, char const *argv[]) {
         /**
          * Prompt user to choose transaction type
          */
-        cout << "Choose transaction type: \ncreate\ndelete\nadvertise\nbid\nrefund\naddCredit" << endl;
+        bool loginStatus = true;
+        while (loginStatus == true){
+
+          string input2;
+          cout << "\nChoose command: \ncreate\ndelete\nadvertise\nbid\nrefund\naddCredit\ndisplayTransactions\nlogout" << endl;
+          cin >> input2;
+
+          if (input2 == "create"){
+            cout << "TODO: create" << endl;
+          }else if (input2 == "delete"){
+            cout << "TODO: delete" << endl;
+          }else if (input2 == "advertise"){
+            cout << "TODO: advertise" << endl;
+          }else if (input2 == "bid"){
+            cout << "TODO: bid" << endl;
+          }else if (input2 == "refund"){
+            cout << "TODO: refund" << endl;
+          }else if (input2 == "addCredit"){
+            cout << "TODO: addCredit" << endl;
+          }else if (input2 == "delete"){
+            cout << "TODO: delete" << endl;
+          }else if (input2 == "displayTransactions"){
+            cout << "TODO: displayTransaction" << endl;
+          }else if (input2 == "logout"){
+            cout << "TODO: logout" << endl;
+            logout();
+            loginStatus = false;
+          }else{
+            cout << "Invalid command, please enter again" << endl;
+          }
+        }
+
+        cout << "\nThank you come again!" << endl;
+
 
         return 0;
 }
