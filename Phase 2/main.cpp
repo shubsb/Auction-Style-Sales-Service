@@ -140,7 +140,7 @@ void addCredit(){
  * Gets the list of available items on auction
  */
 vector<Item> getAvailableItems() {
-        //  TODO 
+        //  TODO
 };
 
 int main(int argc, char const *argv[]) {
@@ -148,7 +148,9 @@ int main(int argc, char const *argv[]) {
         /**
          * This file stores every available item up for auction
          */
-        string availableItemsFile = "available_Items_File.ai";
+        string currentUserAccountsFile = argv[0];
+        string availableItemsFile = argv[1];
+        string dailyTransactionFile = argv[2];
         string input;
         string user;
 
