@@ -8,7 +8,18 @@ Welcome to Auction Style Sales Service
 Enter 'login' to start
 
 Enter username: VALID_USER
-Logged in as TT
+Logged in as BS
+
+Choose command:
+create
+delete
+advertise
+bid
+refund
+addCredit
+displayTransactions
+logout
+Invalid command, please enter again
 
 Choose command:
 create

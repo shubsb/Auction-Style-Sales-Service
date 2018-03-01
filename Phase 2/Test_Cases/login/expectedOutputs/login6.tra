@@ -8,7 +8,7 @@ Welcome to Auction Style Sales Service
 Enter 'login' to start
 
 Enter username: VALID_USER
-Logged in as TT
+Logged in as SS
 
 Choose command:
 create
@@ -18,7 +18,7 @@ bid
 refund
 addCredit
 displayTransactions
-log
+logout
 TODO: logout
 Logout implementation
 

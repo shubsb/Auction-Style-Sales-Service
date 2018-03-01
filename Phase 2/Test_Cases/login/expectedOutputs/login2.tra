@@ -7,14 +7,13 @@ daily_Transaction_file.tra
 Welcome to Auction Style Sales Service
 Enter 'login' to start
 
-Enter username: VALID_USER
-Logged in as TT
+Enter username: INVALID_USER
 
 Choose command:
 create
 delete
 advertise
-bids
+bid
 refund
 addCredit
 displayTransactions

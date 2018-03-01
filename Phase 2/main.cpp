@@ -2,10 +2,13 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <stdio.h>
+#include <string.h>
 #include "user.h"
 #include "item.h"
 #include "transaction.h"
 #include "bid.h"
+#include <stdlib.h>
 
 using namespace std;
 
@@ -24,17 +27,18 @@ void login(string currentUser, string &currentUserAccountsFile){
         userFile.open(currentUserAccountsFile.c_str());
 
         bool loginStatus = false;
-        string userType = "NULL";
+        string userType;
 
         while (!userFile.eof()) {
                 string line;
                 userFile >> line;
 
-                // Checks if user exists in line of text
-                if (currentUser == line.substr(0,15)) {
-                        loginStatus = true;
-                        userType = line.substr(16,2);
-                }
+              // Checks if user exists in line of text
+              if (currentUser.substr(0,15) == line.substr(0,15)){
+                loginStatus = true;
+                userType = line.substr(16,2);
+              }
+
         }
 
         if (loginStatus == true) {
@@ -51,7 +55,7 @@ void login(string currentUser, string &currentUserAccountsFile){
  * Logs the user out
  */
 void logout(){
-        // TODO
+
         cout << "Logout implementation" << endl;
 };
 
@@ -137,7 +141,7 @@ void refund(){
  * Adds credit to a user's account
  */
 void addCredit(){
-        // TODO
+  cout << "TODO" << endl;
 };
 
 /**
@@ -157,6 +161,7 @@ int main(int argc, char const *argv[]) {
         string dailyTransactionFile = argv[3];
         string input1;
         string user;
+
 
         cout << "\nLoading files..." << endl;
         cout << currentUserAccountsFile << endl;
@@ -183,6 +188,7 @@ int main(int argc, char const *argv[]) {
                 cout << "Invalid login, please enter again" << endl;
         }
 
+
         /**
          * Prompt user to choose transaction type
          */
@@ -204,7 +210,11 @@ int main(int argc, char const *argv[]) {
           }else if (input2 == "refund"){
             cout << "TODO: refund" << endl;
           }else if (input2 == "addCredit"){
-            cout << "TODO: addCredit" << endl;
+            if (user.substr(16,2) == "AA") {
+              addCredit();
+            } else {
+              cout << "You are not admin!" << endl;
+            }
           }else if (input2 == "delete"){
             cout << "TODO: delete" << endl;
           }else if (input2 == "displayTransactions"){
