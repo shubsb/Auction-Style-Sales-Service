@@ -140,8 +140,18 @@ void refund(){
 /**
  * Adds credit to a user's account
  */
-void addCredit(){
-  cout << "TODO" << endl;
+void addCredit(string userCreditAdded, string &currentUserAccountsFile, float amountToAdd){
+    ifstream userFile;
+    userFile.open(currentUserAccountsFile.c_str());
+    while (!userFile.eof()) {
+      string line;
+      userFile >> line;
+
+      if (userCreditAdded.substr(0,15) == line.substr(0,15)){
+        cout<<"User exists!";
+      }
+    }
+
 };
 
 /**
@@ -210,11 +220,18 @@ int main(int argc, char const *argv[]) {
           }else if (input2 == "refund"){
             cout << "TODO: refund" << endl;
           }else if (input2 == "addCredit"){
+
             if (user.substr(16,2) == "AA") {
-              addCredit();
-            } else {
-              cout << "You are not admin!" << endl;
+              string userCreditAdded = "UUUUUUUUUUUUUUU";
+              float amountToAdd = 150.0f;
+              if(amountToAdd > 0 && amountToAdd <= 1000.0f){
+                addCredit(userCreditAdded,currentUserAccountsFile,amountToAdd);
+              }
             }
+            else {
+              cout << "You are not an admin!" << endl;
+            }
+
           }else if (input2 == "delete"){
             cout << "TODO: delete" << endl;
           }else if (input2 == "displayTransactions"){
