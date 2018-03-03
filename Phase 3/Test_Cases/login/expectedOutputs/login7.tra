@@ -1,0 +1,36 @@
+
+Loading files...
+current_User_Accounts_File.uaf
+available_Items_File.ai
+daily_Transaction_File.tra
+
+Welcome to Auction Style Sales Service
+Enter 'login' to start
+
+Enter username: VALID_USER
+Logged in as BS
+
+Choose command:
+create
+delete
+advertise
+bid
+refund
+addCredit
+displayTransactions
+logout
+Invalid command, please enter again
+
+Choose command:
+create
+delete
+advertise
+bid
+refund
+addCredit
+displayTransactions
+logout
+TODO: logout
+Logout implementation
+
+Thank you come again!
