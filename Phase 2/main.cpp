@@ -1,4 +1,3 @@
-#include <iostream>
 #include <string>
 #include <fstream>
 #include <vector>
@@ -9,6 +8,7 @@
 #include "transaction.h"
 #include "bid.h"
 #include <stdlib.h>
+#include<iostream>
 
 using namespace std;
 
