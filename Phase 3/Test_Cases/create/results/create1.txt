@@ -19,7 +19,7 @@ refund
 addCredit
 displayTransactions
 logout
-Please enter a new usernamePlease enter user Type
+please enter usernameplease enter userType
 Choose command: 
 create
 delete

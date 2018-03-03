@@ -69,8 +69,20 @@ void deleteUser(){
 /**
  * Creates a user
  */
-void createUser(){
-        // TODO
+void createUser(string userName, string userType, string currentUserType){
+        ofstream file;
+
+        file.open("current_User_Accounts_File", std::ios::app);
+        if (currentUserType == "AA") {
+          if (userName.length() == 15) {
+            file << userName + "_" + userType + "_" + "000000" << endl;
+          } else {
+            cout << "User name must be 15 characters long" << endl;
+          }
+        } else {
+          cout << "You are not an admin!" << endl;
+        }
+        file.close();
         /*
            string userType = "AA";
            string userName = argv[1];
@@ -210,13 +222,20 @@ int main(int argc, char const *argv[]) {
           cin >> input2;
 
           if (input2 == "create"){
-            cout << "TODO: create" << endl;
+            string userName;
+            string userType;
+            cout << "please enter username";
+            cin >> userName;
+            cout << "please enter userType";
+            cin >> userType;
+            string currentUserType = user.substr(16,2);
+            createUser(userName, userType, currentUserType);
           }else if (input2 == "delete"){
             cout << "TODO: delete" << endl;
           }else if (input2 == "advertise"){
             cout << "TODO: advertise" << endl;
           }else if (input2 == "bid"){
-            cout << "TODO: bid" << endl;
+            Bid bid = new bid(currentBid, newBid, minimumBid);
           }else if (input2 == "refund"){
             cout << "TODO: refund" << endl;
           }else if (input2 == "addCredit"){
